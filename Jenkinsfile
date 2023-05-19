@@ -6,5 +6,10 @@ pipeline{
                 git url: 'https://github.com/aviraln/demo-counter-app.git', branch: 'main' 
             }
         }
+        stage('Unit Testing'){
+            steps{
+                sh 'mvn test' 
+            }
+        }
     }
 }
